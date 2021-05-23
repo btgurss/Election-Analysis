@@ -18,6 +18,7 @@ Within the for loop listed above I used an if statement to do several things.
     2.	If the county was not in the list I added to the list
     3.	I set that county count to zero if I had just added it to the list
     4.	If the county was already on the list I added one to that counties vote total using a dictionary with the county as the key.
+    
   - I then used a for statement to loop through the different county names
   - Once I had a county name I used the get method to count the number of rows with that county name.
   - Using that information I was able to write a formula to find the percentage of the vote that came from that county
