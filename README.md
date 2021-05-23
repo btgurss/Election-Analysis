@@ -14,14 +14,14 @@ In order to determine the total number of votes cast in the election I used a fo
 
 - Breakdown of Counties
 Within the for loop listed above I used an if statement to do several things. 
-1.	Check to see if the county was in my list of counties labeled county_options
-2.	If the county was not in the list I added to the list
-3.	I set that county count to zero if I had just added it to the list
-4.	If the county was already on the list I added one to that counties vote total using a dictionary with the county as the key.
-I then used a for statement to loop through the different county names
-Once I had a county name I used the get method to count the number of rows with that county name.
-Using that information I was able to write a formula to find the percentage of the vote that came from that county
-Lastly I printed the results using an f statement.  The f statement printed the county name, percentage of total vote (formatted to one decimal place), and the raw total vote amount (formatted to include commas) These results were printed to the terminal and to the election analysis txt file.
+  1.	Check to see if the county was in my list of counties labeled county_options
+  2.	If the county was not in the list I added to the list
+  3.	I set that county count to zero if I had just added it to the list
+  4.	If the county was already on the list I added one to that counties vote total using a dictionary with the county as the key.
+- I then used a for statement to loop through the different county names
+- Once I had a county name I used the get method to count the number of rows with that county name.
+- Using that information I was able to write a formula to find the percentage of the vote that came from that county
+- Lastly I printed the results using an f statement.  The f statement printed the county name, percentage of total vote (formatted to one decimal place), and the raw total vote amount (formatted to include commas) These results were printed to the terminal and to the election analysis txt file.
 
 Determining the county with the most votes
  Within the for loop that was cycling through the different counties I wrote an If statement that would check to see if that particular county had the highest vote count.  If it did I set that as the winning county.  If the next county had more, the winning county would change.  If it did not have more, the winning county would stay what it already was.
