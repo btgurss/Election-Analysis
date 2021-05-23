@@ -10,6 +10,7 @@ All of this information needed to be sent to a txt file that could be easily acc
 
 ## Election Audit Results
 - Determining in the number of votes
+
 In order to determine the total number of votes cast in the election I used a for loop to cycle through each row in the imported csv file.  Within this for loop I added 1 to a count variable.  This count variable was set equal to zero before the for loop began. 
 
 ![Total-Count-Code.png](Total-Count-Code.png)
