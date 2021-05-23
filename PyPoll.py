@@ -16,6 +16,7 @@ candidate_options = []
 #Dictionary to hold Candidate vote totals
 candidate_votes = {}
 
+#Declaring variables for winning candidate count
 winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
@@ -48,6 +49,7 @@ with open(file_to_load) as election_data:
         #Count the votes
         candidate_votes[candidate_name] += 1
 
+    #Opeing file to write results to
     with open(file_to_save, "w") as txt_file:
 
         #Print the final vote count to the terminal
@@ -57,25 +59,33 @@ with open(file_to_load) as election_data:
             f"Total Votes: {total_votes:,}\n"
             f"------------------------\n")
         print(election_results, end="")
+
+        #Sending written results to election_analysis txt file
         txt_file.write(election_results)
 
         #Figuring vote percentage
         for candidate_name in candidate_votes:
+            
             #Retrieve vote count of a candidate.
             votes = candidate_votes[candidate_name]
+           
             #Calculate percentage
             vote_percentage = float(votes) / float(total_votes) * 100
+            
             #Print candidate name and percentage of votes
             candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
             print(candidate_results)
 
+            #Sending written results to txt file
             txt_file.write(candidate_results)
+
             #If statement to determine winner
             if(votes>winning_count) and (vote_percentage>winning_percentage):
                 winning_count = votes
                 winning_percentage = vote_percentage
                 winning_candidate = candidate_name
-            
+
+        #Printing winning candidate information    
         winning_candidate_summary = (
             f"--------------------------\n"
             f"Winner: {winning_candidate}\n"
@@ -84,15 +94,9 @@ with open(file_to_load) as election_data:
             f"--------------------------\n")
 
         print (winning_candidate_summary)
+
+        #Sending written information to txt file
         txt_file.write(winning_candidate_summary)
-        
 
-
-    #Open election results and read the file
-    #1. Count the total number of votes cast
-    #2. List all candidates that received votes
-    #3. Find Percentage of votes for each candidate
-    #4. Find total number of votes for each candidate
-    #5. Who won?
-    #Close the File
+#Closing File  
 election_data.close()
