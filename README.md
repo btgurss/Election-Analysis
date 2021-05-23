@@ -30,7 +30,7 @@ Within the for loop listed above I used an if statement to do several things.
     - Using that information I was able to write a formula to find the percentage of the vote that came from that county
     - Lastly I printed the results using an f statement.  The f statement printed the county name, percentage of total vote (formatted to one decimal place), and the raw total vote amount (formatted to include commas) These results were printed to the terminal and to the election analysis txt file.
 
-![
+![County-Vote-Percentage-Code.png](County-Vote-Percentage-Code.png)
 
 - Determining the county with the most votes
 
