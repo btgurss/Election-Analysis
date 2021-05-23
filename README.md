@@ -11,7 +11,7 @@ All of this information needed to be sent to a txt file that could be easily acc
 ## Election Audit Results
 - Determining in the number of votes
 In order to determine the total number of votes cast in the election I used a for loop to cycle through each row in the imported csv file.  Within this for loop I added 1 to a count variable.  This count variable was set equal to zero before the for loop began. 
-![Theater_Outcomes_vs_Launch](Theater_Outcomes_vs_Launch.png)
+![Total-Count-Code.png](Total-Count-Code.png)
 
 - Breakdown of Counties
 Within the for loop listed above I used an if statement to do several things. 
@@ -19,7 +19,7 @@ Within the for loop listed above I used an if statement to do several things.
     2.	If the county was not in the list I added to the list
     3.	I set that county count to zero if I had just added it to the list
     4.	If the county was already on the list I added one to that counties vote total using a dictionary with the county as the key.
-    
+![County-Vote-Count-Code.png](County-Vote-Count-Code.png)
   - I then used a for statement to loop through the different county names
   - Once I had a county name I used the get method to count the number of rows with that county name.
   - Using that information I was able to write a formula to find the percentage of the vote that came from that county
@@ -31,6 +31,8 @@ Within the for loop listed above I used an if statement to do several things.
 
 - Determining the number and percentage of votes cast for each candidate
   - In order to determine the number of votes cast to each candidate I wrote a for loop to cycle through each row in the csv file.  Within this for loop I wrote an if statement to determine if a candidates name had already appeared.  If the name had not appeared I added it to the list of candidates.  I also set the value of that candidate’s name key as zero.  Outside of the if statement I added one to the count total (set as the value of the candidate’s name key).  If the candidate’s name was already in the list, then I only needed to add one to the vote counter dictionary. 
+![Candidate-Vote-Count-Code.png](Candidate-Vote-Count-Code.png)
+
   - To find the percentage I retrieved the candidates vote total and divided by the total number of votes.  This was done by using the get method on the candidate’s name key.  I printed out the results with a format for one decimal place on the percentage and commas in the total count.
 
 - Winning Candidate
