@@ -15,6 +15,7 @@ In order to determine the total number of votes cast in the election I used a fo
 ![Total-Count-Code.png](Total-Count-Code.png)
 
 - Breakdown of Counties
+
 Within the for loop listed above I used an if statement to do several things. 
     1.	Check to see if the county was in my list of counties labeled county_options
     2.	If the county was not in the list I added to the list
@@ -31,13 +32,15 @@ Within the for loop listed above I used an if statement to do several things.
 ![
 
 - Determining the county with the most votes
+
  Within the for loop that was cycling through the different counties I wrote an If statement that would check to see if that particular county had the highest vote count.  If it did I set that as the winning county.  If the next county had more, the winning county would change.  If it did not have more, the winning county would stay what it already was.
 
 ![Winning-County-Code.png](Winning-County-Code.png)
 
 - Determining the number and percentage of votes cast for each candidate
+
   - In order to determine the number of votes cast to each candidate I wrote a for loop to cycle through each row in the csv file.  Within this for loop I wrote an if statement to determine if a candidates name had already appeared.  If the name had not appeared I added it to the list of candidates.  I also set the value of that candidate’s name key as zero.  Outside of the if statement I added one to the count total (set as the value of the candidate’s name key).  If the candidate’s name was already in the list, then I only needed to add one to the vote counter dictionary. 
-  - 
+  
 ![Candidate-Vote-Count-Code.png](Candidate-Vote-Count-Code.png)
 
   - To find the percentage I retrieved the candidates vote total and divided by the total number of votes.  This was done by using the get method on the candidate’s name key.  I printed out the results with a format for one decimal place on the percentage and commas in the total count.
@@ -45,6 +48,7 @@ Within the for loop listed above I used an if statement to do several things.
 ![Candidate-Vote-Percentage-Code.png](Candidate-Vote-Percentage-Code.png)
 
 - Winning Candidate
+
 To determine the winning candidate I created an if statement inside of the for loop cycling through the candidate names.  The if statement was triggered if the votes and percentage of a particular candidate was more than any other candidate that had already been cycled through.  If they were, that candidate became the winning candidate and the winning amounts were set to his/her values.
 
 ![Winning-Vote-Data-Code.png](Winning-Vote-Data-Code.png)
