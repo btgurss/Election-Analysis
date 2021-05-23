@@ -25,10 +25,10 @@ Within the for loop listed above I used an if statement to do several things.
     
 ![County-Vote-Count-Code.png](County-Vote-Count-Code.png)
 
-  - I then used a for statement to loop through the different county names
-  - Once I had a county name I used the get method to count the number of rows with that county name.
-  - Using that information I was able to write a formula to find the percentage of the vote that came from that county
-  - Lastly I printed the results using an f statement.  The f statement printed the county name, percentage of total vote (formatted to one decimal place), and the raw total vote amount (formatted to include commas) These results were printed to the terminal and to the election analysis txt file.
+    - I then used a for statement to loop through the different county names
+    - Once I had a county name I used the get method to count the number of rows with that county name.
+    - Using that information I was able to write a formula to find the percentage of the vote that came from that county
+    - Lastly I printed the results using an f statement.  The f statement printed the county name, percentage of total vote (formatted to one decimal place), and the raw total vote amount (formatted to include commas) These results were printed to the terminal and to the election analysis txt file.
 
 ![
 
